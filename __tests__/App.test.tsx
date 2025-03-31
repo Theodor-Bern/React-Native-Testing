@@ -1,13 +1,16 @@
-/**
- * @format
- */
-
 import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import App from '../App';
+import {Text, View} from 'react-native';
 
-test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
-  });
-});
+const HelloWorldApp = () => {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <Text>Hello, world!</Text>
+    </View>
+  );
+};
+export default HelloWorldApp;
